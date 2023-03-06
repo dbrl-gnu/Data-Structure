@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <android.widget.Button
+        android:id="@+id/BIE"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/cercleblau"
+        android:onClick="setLletra"
+        android:text="BIE"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toStartOf="@+id/BID"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/BE"
+        tools:ignore="DuplicateSpeakableTextCheck" />
+
+    <android.widget.Button
+        android:id="@+id/BSE"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/cercleblau"
+        android:onClick="setLletra"
+        android:text="BSE"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toTopOf="@+id/BE"
+        app:layout_constraintEnd_toStartOf="@+id/BSD"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <android.widget.Button
+        android:id="@+id/BSD"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/cercleblau"
+        android:onClick="setLletra"
+        android:text="BSD"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toTopOf="@+id/BD"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/BSE" />
+
+    <android.widget.Button
+        android:id="@+id/BID"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/cercleblau"
+        android:onClick="setLletra"
+        android:text="BID"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/BIE"
+        app:layout_constraintTop_toBottomOf="@+id/BD" />
+
+    <android.widget.Button
+        android:id="@+id/BD"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/cercleblau"
+        android:onClick="setLletra"
+        android:text="BD"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toBottomOf="@+id/BC"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/BC" />
+
+    <android.widget.Button
+        android:id="@+id/BC"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/cerclevermell"
+        android:onClick="setLletra"
+        android:text="BC"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toTopOf="@+id/BShuffle"
+        app:layout_constraintEnd_toStartOf="@+id/BSD"
+        app:layout_constraintStart_toEndOf="@+id/BSE"
+        app:layout_constraintTop_toBottomOf="@+id/Logo" />
+
+    <android.widget.Button
+        android:id="@+id/BE"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/cercleblau"
+        android:onClick="setLletra"
+        android:text="BE"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toBottomOf="@+id/BC"
+        app:layout_constraintEnd_toStartOf="@+id/BC"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/BShuffle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="74dp"
+        android:onClick="shuffle"
+        android:text="Shuffle"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/BID"
+        app:layout_constraintStart_toEndOf="@+id/BIE" />
+
+    <Button
+        android:id="@+id/BSuprimir"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="supLletra"
+        android:text="Suprimir"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/BShuffle"
+        app:layout_constraintHorizontal_chainStyle="spread"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/BIE" />
+
+    <TextView
+        android:id="@+id/Paraula"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toTopOf="@+id/BSE"
+        app:layout_constraintEnd_toStartOf="@+id/BSolucions"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/Logo" />
+
+    <Button
+        android:id="@+id/BIntrodueix"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="intParaula"
+        android:text="Introduir"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/BShuffle"
+        app:layout_constraintTop_toBottomOf="@+id/BID" />
+
+    <Button
+        android:id="@+id/BSolucions"
+        android:layout_width="65dp"
+        android:layout_height="48dp"
+        android:onClick="mostSolucions"
+        android:text="Sol"
+        app:layout_constraintBottom_toTopOf="@+id/BSD"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/Logo"
+        app:layout_constraintTop_toBottomOf="@+id/Logo" />
+
+    <ImageView
+        android:id="@+id/Logo"
+        android:layout_width="300dp"
+        android:layout_height="100dp"
+        android:layout_marginTop="15dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/logotip" />
+
+    <TextView
+        android:id="@+id/RespostesV"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="30dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/BShuffle" />
+</androidx.constraintlayout.widget.ConstraintLayout>
